@@ -1,0 +1,11 @@
+Model Information:
+* title:	Shuttle interior from "2001: A Space Odyssey "
+* source:	https://sketchfab.com/3d-models/shuttle-interior-from-2001-a-space-odyssey-f200b7941c034c75a4dd8983283467ef
+* author:	apetrova.hanna (https://sketchfab.com/apetrova.hanna)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Shuttle interior from "2001: A Space Odyssey "" (https://sketchfab.com/3d-models/shuttle-interior-from-2001-a-space-odyssey-f200b7941c034c75a4dd8983283467ef) by apetrova.hanna (https://sketchfab.com/apetrova.hanna) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

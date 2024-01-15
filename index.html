@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body class="preload">
+        <div class="parent row">
+            <section class="parallax">
+                <img src="public/img/opening_bg.png" id="hill1" />
+                <img src="public/img/opening_sun.png" id="hill2" />
+                <img src="public/img/opening_monolith.png" id="hill3" />
+                <img src="public/img/opening_moon.png" id="hill4" />
+            </section>
+            <section class="title">
+                <h1 id="animatedText">2OO1: A SPACE ODYSSEY</h1>
+            </section>
+            <canvas class="webgl"></canvas>
+            <section class="ultimate-trip card">
+                <h2>THE ULTIMATE TRIP</h2>
+                <p>
+                    This revolutionary sci-fi fiction was released in 1968. On
+                    an epic voyage to Jupiter we follow the journey of human
+                    evolution.
+                </p>
+                <div id="quiz-container">
+                    <p id="quiz-question">
+                        What groundbreaking concept that was way ahead of its
+                        time did this film introduce?
+                    </p>
+                    <div id="options">
+                        <label>
+                            <input type="radio" name="quiz-option" value="ai" />
+                            Artificial Intelligence
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="quiz-option"
+                                value="space"
+                            />
+                            Space travel and exploration
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="quiz-option"
+                                value="calling"
+                            />
+                            Video calling
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="quiz-option"
+                                value="all"
+                            />
+                            All of the above
+                        </label>
+                    </div>
+                    <button>Submit</button>
+                </div>
+                <p id="result"></p>
+            </section>
+            <section class="ultimate-trip card none">
+                <p>
+                    Known for its stunning visuals, minimal dialogue, and
+                    classical music score, the film is celebrated for its
+                    philosophical depth and cinematic innovation. The film keeps
+                    on being extremely relevant, due to its groundbreaking
+                    concepts of video calling, space travel and artificial
+                    intelligence.
+                </p>
+            </section>
+            <section class="picture-phone">
+                <div class="pictures">
+                    <img id="aiImage" src="public/img/ai-1.png" alt="" />
+                    <img id="aiImageOverlay" src="" alt="" />
+                    <img id="aiImageScreen" src="" alt="" />
+                    <img id="aiImageTeams" src="" alt="" />
+                </div>
+
+                <section class="card">
+                    <h2>PICTURE PHONE</h2>
+                    <p>
+                        Dr. Heywood Floyd utilizes a picture phone to
+                        communicate with his daughter while he is on a space
+                        station. The idea of a portable device for video
+                        communication was only speculative back then, while
+                        nowadays it is an extremely normal concept in our
+                        society.
+                    </p>
+                </section>
+            </section>
+            <canvas class="shuttle"></canvas>
+            <section class="space">
+                <h2>NEW STANDARDS</h2>
+                <p>
+                    Kubrick set new standards for portraying the vastness and
+                    realism of space.
+                </p>
+
+                <section class="scroll-info">
+                    <p>
+                        Involving a combination of practical effects,
+                        miniatures, and pioneering special effects, he pushed
+                        the boundaries of what was achievable in filmmaking
+                        during the 1960s.
+                    </p>
+                    <p>
+                        The film's realistic depiction of weightlessness,
+                        spacecraft movements, and the overall aesthetics of
+                        space travel left an indelible mark on the sci-fi genre.
+                    </p>
+                </section>
+            </section>
+
+            <section class="ai">
+                <section class="hal-9000">
+                    <div class="eye">
+                        <div class="glow"></div>
+                    </div>
+                    <div class="animated"></div>
+                </section>
+                <section class="panel">
+                    <section class="controls">
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch1"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch1"></label>
+                                    <div class="lamp lamp1"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch2"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch2"></label>
+                                    <div class="lamp lamp2"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch3"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch3"></label>
+                                    <div class="lamp lamp3"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch4"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch4"></label>
+                                    <div class="lamp lamp4"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch5"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch5"></label>
+                                    <div class="lamp lamp5"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch6"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch6"></label>
+                                    <div class="lamp lamp6"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+                        <span class="switch">
+                            <span class="switch-border1">
+                                <span class="switch-border2">
+                                    <input
+                                        id="switch7"
+                                        type="checkbox"
+                                        checked
+                                    />
+                                    <label for="switch7"></label>
+                                    <div class="lamp lamp7"></div>
+                                    <span class="switch-top"></span>
+                                    <span class="switch-shadow"></span>
+                                    <span class="switch-handle"></span>
+                                    <span class="switch-handle-left"></span>
+                                    <span class="switch-handle-right"></span>
+                                    <span class="switch-handle-top"></span>
+                                    <span class="switch-handle-bottom"></span>
+                                    <span class="switch-handle-base"></span>
+                                </span>
+                            </span>
+                        </span>
+                    </section>
+                    <div class="lights"></div>
+                </section>
+            </section>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
