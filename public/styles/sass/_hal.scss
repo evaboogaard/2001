@@ -236,37 +236,50 @@
                     position: absolute;
                     width: 100%;
                     aspect-ratio: 1;
-                    background-color: red;
+                    background-image: linear-gradient(
+                        45deg,
+                        #ffffff 10%,
+                        rgba(255, 255, 255, 0.2),
+                        rgba(64, 64, 64, 0.2),
+                        rgba(255, 255, 255, 0.2),
+                        #ffffff 90%
+                    );
                     border-radius: 50%;
                     top: 20rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-image: radial-gradient(
+                            #f00 20%,
+                            #f00 70%,
+                            #470010 70%,
+                            #1a193e 90%
+                        );
+                        mix-blend-mode: soft-light;
+                        opacity: 0.8;
+                        z-index: 100;
+                        width: 80%;
+                        aspect-ratio: 1;
+                        left: 10%;
+                        top: 10%;
+                        border-radius: 50%;
+                    }
                 }
 
-                #switch1:checked + label + .lamp.lamp1 {
-                    background-color: green;
-                }
-
-                #switch2:checked + label + .lamp.lamp2 {
-                    background-color: green;
-                }
-
-                #switch3:checked + label + .lamp.lamp3 {
-                    background-color: green;
-                }
-
-                #switch4:checked + label + .lamp.lamp4 {
-                    background-color: green;
-                }
-
-                #switch5:checked + label + .lamp.lamp5 {
-                    background-color: green;
-                }
-
-                #switch6:checked + label + .lamp.lamp6 {
-                    background-color: green;
-                }
-
-                #switch7:checked + label + .lamp.lamp7 {
-                    background-color: green;
+                #switch1:checked + label + .lamp.lamp1::before,
+                #switch2:checked + label + .lamp.lamp2::before,
+                #switch3:checked + label + .lamp.lamp3::before,
+                #switch4:checked + label + .lamp.lamp4::before,
+                #switch5:checked + label + .lamp.lamp5::before,
+                #switch6:checked + label + .lamp.lamp6::before,
+                #switch7:checked + label + .lamp.lamp7::before {
+                    background-image: radial-gradient(
+                        rgb(0, 147, 10) 20%,
+                        rgb(0, 147, 10) 70%,
+                        #014700 70%,
+                        #1a193e 90%
+                    );
                 }
             }
 

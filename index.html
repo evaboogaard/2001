@@ -4,10 +4,15 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite App</title>
+        <title>2OO1</title>
     </head>
     <body class="preload">
         <div class="parent row">
+            <!-- <canvas class="loading"></canvas> -->
+            <button class="bg-audio">
+                <img src="public/img/mute.png" alt="" />
+            </button>
+
             <section class="parallax">
                 <img src="public/img/opening_bg.png" id="hill1" />
                 <img src="public/img/opening_sun.png" id="hill2" />
@@ -31,36 +36,38 @@
                         time did this film introduce?
                     </p>
                     <div id="options">
-                        <label>
-                            <input type="radio" name="quiz-option" value="ai" />
-                            Artificial Intelligence
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                name="quiz-option"
-                                value="space"
-                            />
+                        <input
+                            type="radio"
+                            name="quiz-option"
+                            value="ai"
+                            id="option1"
+                        />
+                        <label for="option1"> Artificial Intelligence </label>
+                        <input
+                            type="radio"
+                            name="quiz-option"
+                            value="space"
+                            id="option2"
+                        />
+                        <label for="option2">
                             Space travel and exploration
                         </label>
-                        <label>
-                            <input
-                                type="radio"
-                                name="quiz-option"
-                                value="calling"
-                            />
-                            Video calling
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                name="quiz-option"
-                                value="all"
-                            />
-                            All of the above
-                        </label>
+                        <input
+                            type="radio"
+                            name="quiz-option"
+                            value="calling"
+                            id="option3"
+                        />
+                        <label for="option3"> Video calling </label>
+                        <input
+                            type="radio"
+                            name="quiz-option"
+                            value="all"
+                            id="option4"
+                        />
+                        <label for="option4"> All of the above </label>
                     </div>
-                    <button>Submit</button>
+                    <button>SUBMIT</button>
                 </div>
                 <p id="result"></p>
             </section>

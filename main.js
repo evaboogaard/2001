@@ -7,6 +7,8 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import '/public/scripts/parallax.js';
 import '/public/scripts/intersection.js';
+import '/public/scripts/ai.js';
+import '/public/scripts/quiz.js';
 import '/public/styles/style.css';
 
 setTimeout(function () {
@@ -72,7 +74,7 @@ loader.load(
         scene.add(gltfModel);
         gltfModel.scale.set(0.0015, 0.0015, 0.0015); // Adjust the scale as needed
 
-        gltfModel.position.x = 15;
+        gltfModel.position.x = 35;
 
         gsap.to(gltfModel.rotation, {
             y: '+=7',
@@ -170,14 +172,6 @@ const shuttleSizes = {
 const shuttleAmbientLight = new THREE.AmbientLight(0xffffff);
 shuttleScene.add(shuttleAmbientLight);
 
-const shuttleDirectionalLight = new THREE.DirectionalLight(0xffffff);
-shuttleDirectionalLight.position.set(10, 10, 20).normalize();
-shuttleScene.add(shuttleDirectionalLight);
-
-const shuttlePointLight = new THREE.PointLight(0xffffff, 70, 100, 1.7);
-shuttlePointLight.position.set(-5, 7, 10);
-shuttleScene.add(shuttlePointLight);
-
 // Camera
 const shuttleCamera = new THREE.PerspectiveCamera(
     70,
@@ -209,14 +203,14 @@ shuttleLoader.load(
     (gltf) => {
         shuttleModel = gltf.scene;
         shuttleScene.add(shuttleModel);
-        shuttleModel.scale.set(0.05, 0.05, 0.05); // Adjust the scale as needed
-
         shuttleModel.position.y = -20;
 
+        shuttleModel.scale.set(0.05, 0.05, 0.05); // Adjust the scale as needed
+
         gsap.to(shuttleModel.scale, {
-            x: '+=0.1',
-            y: '+=0.1',
-            z: '+=0.1',
+            x: '+=0.12',
+            y: '+=0.12',
+            z: '+=0.12',
 
             scrollTrigger: {
                 trigger: '.shuttle',
@@ -236,6 +230,16 @@ shuttleLoader.load(
                     // Make the .space section visible when the animation ends
                     gsap.to('.scroll-info', { opacity: 1, duration: 1 });
                 },
+            },
+        });
+
+        gsap.to(shuttleModel.position, {
+            y: '+=-40', // Adjust the value as needed
+            scrollTrigger: {
+                trigger: '.shuttle',
+                start: 'top top+=0',
+                end: 'bottom top+=600',
+                scrub: 2,
             },
         });
 
@@ -269,4 +273,105 @@ window.addEventListener('resize', () => {
     shuttleCamera.aspect = shuttleSizes.width / shuttleSizes.height;
     shuttleCamera.updateProjectionMatrix();
     shuttleRenderer.setSize(shuttleSizes.width, shuttleSizes.height);
+});
+
+// // Monolith Scene
+// const monolithScene = new THREE.Scene();
+
+// // Sizes
+// const monolithSizes = {
+//     width: window.innerWidth,
+//     height: window.innerHeight,
+// };
+
+// // Light
+// // Add lights to the monolith scene
+// const monolithAmbientLight = new THREE.AmbientLight(0xffffff);
+// monolithScene.add(monolithAmbientLight);
+
+// // Camera
+// const monolithCamera = new THREE.PerspectiveCamera(
+//     70,
+//     monolithSizes.width / monolithSizes.height,
+//     0.1,
+//     100
+// );
+// monolithCamera.position.z = 70;
+// monolithScene.add(monolithCamera);
+
+// // Renderer
+// const monolithCanvas = document.querySelector('.loading');
+// const monolithRenderer = new THREE.WebGLRenderer({ canvas: monolithCanvas });
+// monolithRenderer.setSize(monolithSizes.width, monolithSizes.height);
+// monolithRenderer.setPixelRatio(3);
+
+// // Controls
+// const monolithControls = new OrbitControls(monolithCamera, monolithCanvas);
+// monolithControls.enableDamping = false;
+// monolithControls.enablePan = false;
+// monolithControls.enableZoom = false;
+// monolithControls.enableRotate = false;
+
+// // Load GLTF model
+// const monolithLoader = new GLTFLoader();
+// let monolithModel;
+// monolithLoader.load(
+//     'models/monolith/scene.gltf',
+//     (gltf) => {
+//         monolithModel = gltf.scene;
+//         monolithScene.add(monolithModel);
+
+//         monolithModel.scale.set(0.001, 0.001, 0.001); // Adjust the scale as needed
+
+//         console.log('Monolith GLTF model loaded successfully');
+//         animateMonolith(); // Make sure to call animate() after the model is loaded
+//     },
+//     undefined,
+//     (error) => {
+//         console.error('Error loading Monolith GLTF model', error);
+//     }
+// );
+
+// // Update controls in the animation loop
+// function animateMonolith() {
+//     requestAnimationFrame(animateMonolith);
+
+//     // Update controls for the monolith scene
+//     monolithControls.update();
+
+//     // Render the monolith scene
+//     monolithRenderer.render(monolithScene, monolithCamera);
+// }
+
+// // Resize
+// window.addEventListener('resize', () => {
+//     // Update sizes for the monolith scene
+//     monolithSizes.width = window.innerWidth;
+//     monolithSizes.height = window.innerHeight;
+
+//     // Update Camera for the monolith scene
+//     monolithCamera.aspect = monolithSizes.width / monolithSizes.height;
+//     monolithCamera.updateProjectionMatrix();
+//     monolithRenderer.setSize(monolithSizes.width, monolithSizes.height);
+// });
+
+const bgAudio = new Audio('public/audio/strauss.mp3');
+const bgAudioButton = document.querySelector('.bg-audio');
+const bgAudioIcon = document.querySelector('.bg-audio img');
+
+bgAudioButton.addEventListener('click', () => {
+    // Toggle the 'playing' class
+    bgAudioButton.classList.toggle('playing');
+
+    // Check if the 'playing' class is active
+    const isPlaying = bgAudioButton.classList.contains('playing');
+
+    // If the 'playing' class is active, play the audio; otherwise, pause it
+    if (isPlaying) {
+        bgAudio.play();
+        bgAudioIcon.src = 'public/img/play.png';
+    } else {
+        bgAudio.pause();
+        bgAudioIcon.src = 'public/img/mute.png';
+    }
 });

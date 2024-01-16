@@ -1,0 +1,11 @@
+Model Information:
+* title:	monolith test
+* source:	https://sketchfab.com/3d-models/monolith-test-9a5f80af87294a0c9a4443666ff0e8d5
+* author:	prasannax1 (https://sketchfab.com/prasannax1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "monolith test" (https://sketchfab.com/3d-models/monolith-test-9a5f80af87294a0c9a4443666ff0e8d5) by prasannax1 (https://sketchfab.com/prasannax1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

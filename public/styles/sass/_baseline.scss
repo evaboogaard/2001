@@ -85,6 +85,12 @@ p {
     font-weight: 100;
 }
 
+label {
+    color: white;
+    font-family: 'futura';
+    letter-spacing: 0.15rem;
+}
+
 body.preload * {
     animation-duration: 0s !important;
     -webkit-animation-duration: 0s !important;
