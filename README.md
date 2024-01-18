@@ -4,11 +4,15 @@ Welcome to my project about the film 2001: a space odyssey.
 
 ## Setup
 
+Download the code, now open up your terminal in the right folder. 
+
+Run the following code:
+
 `npm i`
 
 `npm run dev`
 
-enjoy the project :)
+If all is well, the terminal should now tell you on which localhost the website is running. Go there, and enjoy :)
 
 ## Credits
 
