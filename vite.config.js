@@ -1,3 +1,3 @@
 export default {
-    base: '/<repository-naam>/',
+    base: '/2001/',
 };
