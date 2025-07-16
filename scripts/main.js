@@ -1,9 +1,9 @@
-import * as THREE from "../node_modules/three/build/three.module.js";
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-import { gsap } from '../node_modules/gsap';
-import { ScrollTrigger } from '../node_modules/gsap/ScrollTrigger';
-import { ScrollToPlugin } from '../node_modules/gsap/ScrollToPlugin';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 setTimeout(function () {
     document.body.className = '';
