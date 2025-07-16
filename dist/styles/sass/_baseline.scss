@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow: hidden;
+    font-family: 'gillsans', monospace;
+    background-color: black;
+}
+
+article {
+    padding: 0 10%;
+}
+
+@font-face {
+    font-family: 'futura';
+    font-weight: 300;
+    src: url('../../assets/fonts/futura.woff2');
+}
+
+@font-face {
+    font-family: 'futura';
+    font-weight: 200;
+    src: url('../../assets/fonts/futura-light.woff2');
+}
+
+@font-face {
+    font-family: 'gillsans';
+    font-weight: 300;
+    src: url('../../assets/fonts/gillsans-bold.ttf');
+}
+
+@font-face {
+    font-family: 'gillsans';
+    font-weight: 200;
+    src: url('../../assets/fonts/gillsans.ttf');
+}
+
+@font-face {
+    font-family: 'gillsans';
+    font-weight: 100;
+    src: url('../../assets/fonts/gillsans-light.ttf');
+}
+
+:root {
+    --gradient: radial-gradient(
+        transparent 19%,
+        #ec32aa 23%,
+        #d4f6fc 28%,
+        #ec32aa 33%,
+        transparent 36%,
+        transparent 38%,
+        #e558d0 40%,
+        #d0fcfe 45%,
+        #ce73df 50%,
+        transparent 52%,
+        transparent 56%,
+        #b883e7 60%,
+        #b7ffff 65%,
+        #3564c7 72%,
+        transparent
+    );
+}
+
+.parent {
+    overflow: scroll;
+    height: 100vh;
+    // scroll-snap-points-y: repeat(100vh);
+    // scroll-snap-type: y proximity;
+}
+
+h2 {
+    color: white;
+    font-family: 'futura';
+    letter-spacing: 0.15rem;
+}
+
+p {
+    color: white;
+    font-family: 'futura';
+    letter-spacing: 0.15rem;
+    font-weight: 100;
+}
+
+label {
+    color: white;
+    font-family: 'futura';
+    letter-spacing: 0.15rem;
+}
+
+body.preload * {
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition:
+        background-color 0s,
+        opacity 0s,
+        color 0s,
+        width 0s,
+        height 0s,
+        padding 0s,
+        margin 0s !important;
+}
