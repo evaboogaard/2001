@@ -1,6 +1,6 @@
 // Get all the switches
 const switches = document.querySelectorAll('input[type="checkbox"]');
-const halAudio = new Audio('public/audio/hal.mp3');
+const halAudio = new Audio('audio/hal.mp3');
 const carouselElement = document.querySelector('.carousel');
 let timer;
 

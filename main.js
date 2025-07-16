@@ -5,12 +5,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-import '/public/scripts/parallax.js';
-import '/public/scripts/intersection.js';
-import '/public/scripts/ai.js';
-import '/public/scripts/quiz.js';
-import '/public/styles/style.css';
-
 setTimeout(function () {
     document.body.className = '';
 }, 500);
@@ -355,7 +349,7 @@ window.addEventListener('resize', () => {
 //     monolithRenderer.setSize(monolithSizes.width, monolithSizes.height);
 // });
 
-const bgAudio = new Audio('public/audio/strauss.mp3');
+const bgAudio = new Audio('audio/strauss.mp3');
 const bgAudioButton = document.querySelector('.bg-audio');
 const bgAudioIcon = document.querySelector('.bg-audio img');
 
@@ -369,9 +363,9 @@ bgAudioButton.addEventListener('click', () => {
     // If the 'playing' class is active, play the audio; otherwise, pause it
     if (isPlaying) {
         bgAudio.play();
-        bgAudioIcon.src = 'public/img/play.png';
+        bgAudioIcon.src = 'img/play.png';
     } else {
         bgAudio.pause();
-        bgAudioIcon.src = 'public/img/mute.png';
+        bgAudioIcon.src = 'img/mute.png';
     }
 });

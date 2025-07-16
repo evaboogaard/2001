@@ -52,44 +52,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateImageSrc() {
         // Update the img src attribute when the section is in view
-        aiImage.src = 'public/img/ai-2.png';
+        aiImage.src = 'img/ai-2.png';
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-3.png';
+            aiImage.src = 'img/ai-3.png';
         }, 500); // Adjust the delay as needed
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-4.png';
+            aiImage.src = 'img/ai-4.png';
         }, 1000); // Adjust the delay as needed
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-5.png';
+            aiImage.src = 'img/ai-5.png';
         }, 1250); // Adjust the delay as needed
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-6.png';
+            aiImage.src = 'img/ai-6.png';
         }, 1500); // Adjust the delay as needed
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-7.png';
+            aiImage.src = 'img/ai-7.png';
         }, 1750); // Adjust the delay as needed
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-8.png';
+            aiImage.src = 'img/ai-8.png';
         }, 2000); // Adjust the delay as needed
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-9.png';
+            aiImage.src = 'img/ai-9.png';
         }, 2250); // Adjust the delay as needed
 
         setTimeout(() => {
-            aiImage.src = 'public/img/ai-final.png';
+            aiImage.src = 'img/ai-final.png';
         }, 2500); // Adjust the delay as needed
         // setTimeout(() => {
-        //     aiImageOverlay.src = 'public/img/ai-overlay.png';
+        //     aiImageOverlay.src = 'img/ai-overlay.png';
         // }, 2500);
         setTimeout(() => {
-            aiImageScreen.src = 'public/img/ai-screen.png';
+            aiImageScreen.src = 'img/ai-screen.png';
         }, 2500);
     }
 
-    const teamsAudio = new Audio('public/audio/teams.mp3');
+    const teamsAudio = new Audio('audio/teams.mp3');
 
     aiImageScreen.addEventListener('click', () => {
-        aiImageScreen.src = 'public/img/teams.png';
+        aiImageScreen.src = 'img/teams.png';
         teamsAudio.currentTime = 9;
         teamsAudio.play();
 
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // aiImageOverlay.src = '';
             aiImageScreen.src = '';
             teamsAudio.pause();
-            aiImage.src = 'public/img/ai-calling.png';
+            aiImage.src = 'img/ai-calling.png';
         }, 3400);
     });
 });
